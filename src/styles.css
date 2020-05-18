@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+}
+
+div {
+  width: 80%;
+  margin: 20px;
+}
+
+div li {
+  display: flex;
+  align-items: center;
+}
+
+div li + li {
+  margin-top: 15px;
+}
+
+button {
+  background: #7159c1;
+  color: #fff;
+  border: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  width: 50%;
+}
+
+div li button {
+  margin: 0 15px;
+  background: #ca4949;
+  width: 100px;
+}
+
+/*My CSS*/
+
+div ul {
+  align-items: center;
+  width: 60%;
+  border-radius: 5%;
+  margin-bottom: 25px;
+}
+
+div li {
+  background: #7159c1;
+  padding: 0px;
+  color: #fff;
+}
+
+div li span {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 5px;  
+  font-weight: bolder;
+}
+
+div .titleDetails {
+  font-weight: bolder;
+  font-size: 25px;
+  width: 100%;
+}
+
+div .urlDetails {
+  font-size: 15px;
+  width: 100%;
+}
+
+div .techsDetails {
+  font-size: 15px;
+  width: 100%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+
+
+
