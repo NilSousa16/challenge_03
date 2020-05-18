@@ -17,13 +17,14 @@ function App() {
   async function handleAddRepository() {
     const response = await api.post('/repositories', {
       "title" : `Desafio REACTJS - ${Date.now()}`,
-      "url" : "http://github.com/...",
+      "url" : "http://github.com/js/react/overview",
       "techs" : ["Node.js", "Vue.js", "Angular.js"]
     });
 
     const repository = response.data;
     
     setRepositories([...repositories, repository]);
+    
   }
 
   async function handleRemoveRepository(id) {
@@ -40,15 +41,17 @@ function App() {
       <ul data-testid="repository-list">
       {
         repositories.map(repository => <li key={repository.id}>          
-          <div className="details">
+          <div className='infoList'>
             <span className="titleDetails">{repository.title}</span>
-            <span className="urlDetails">{repository.url}</span>
-            <span className="techsDetails">{repository.techs}</span>
-
+            <span className="infoDetails">{repository.url}</span>
+            <span className="infoDetails">              
+              {repository.techs.map(repo => <span className="infoTechs" key={repo}>{repo}</span>)}              
+            </span>
+          
             <button className="buttonDetails" onClick={() => handleRemoveRepository(repository.id)}>
               Remover
             </button>
-          </div>          
+          </div>                  
         </li>)}
       </ul>
 
